@@ -1,1 +1,1 @@
-echo "# WMReader"
+# WMReader
