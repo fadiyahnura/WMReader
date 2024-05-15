@@ -5,8 +5,8 @@ import SidebarComponent from "@/components/sidebar";
 export default function Dashboard() {
   return (
     <>
-      <div className="flex flex-row">
-        <div className="h-screen sticky top-0">
+      <div className="flex flex-row ">
+        <div className="h-screen sticky top-0 bg-grey">
           <SidebarComponent activePage="dashboard"/>
         </div>
         <div className="p-8 flex-1">

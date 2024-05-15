@@ -1,7 +1,7 @@
 import { CreateButtonComponent } from "@/components/button";
 import SidebarComponent from "@/components/sidebar";
 import DataListComponent from "@/components/datalist";
-
+import Link from "next/link";
 
 export default function DataList() {
   return (

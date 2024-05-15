@@ -17,8 +17,7 @@ function LogListComponent() {
           <Table.HeadCell>Email</Table.HeadCell>
           <Table.HeadCell>Day/Date</Table.HeadCell>
           <Table.HeadCell>Timestamp</Table.HeadCell>
-          <Table.HeadCell>Location</Table.HeadCell>
-          <Table.HeadCell>Pic</Table.HeadCell>
+          
           <Table.HeadCell>Status</Table.HeadCell>
         </Table.Head>
         <Table.Body className="divide-y">
@@ -39,12 +38,8 @@ function LogListComponent() {
             <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
               {'13.40'}
             </Table.Cell>
-            <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-              {'LIG2 Lantai 7'}
-            </Table.Cell>
-            <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-              <img src="next.svg" alt="" />
-            </Table.Cell>
+            
+            
             <Table.Cell className="flex">
             <p className="text-green-500 font-medium">Done</p>
             </Table.Cell>
@@ -66,12 +61,7 @@ function LogListComponent() {
             <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
               {'13.40'}
             </Table.Cell>
-            <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-              {'LIG2 Lantai 7'}
-            </Table.Cell>
-            <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-              <img src="next.svg" alt="" />
-            </Table.Cell>
+           
             <Table.Cell className="flex">
             <p className="text-green-500 font-medium">Done</p>
             </Table.Cell>
