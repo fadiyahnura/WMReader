@@ -1,38 +1,25 @@
-import { ButtonModalComponent } from "@/components/button";
-import CardComponent from "@/components/card";
-import { DoorListArray } from "@/components/data/doors";
-import SearchComponent from "@/components/search";
+import { CreateButtonComponent } from "@/components/button";
 import SidebarComponent from "@/components/sidebar";
-import Link from "next/link";
+import DataListComponent from "@/components/datalist";
 
 
-export default function Doors() {
-  const doorList = new DoorListArray();
-
+export default function DataList() {
   return (
-    <>
-      <div className="flex flex-row">
-        <div className="h-screen sticky top-0">
-          <SidebarComponent activePage="doors" />
+    <div className="flex flex-col lg:flex-row"> {/* Menggunakan flexbox untuk mengatur tata letak */}
+      <div className="h-auto lg:h-screen lg:w-1/4 sticky top-0"> {/* Mengatur lebar sidebar untuk layar kecil */}
+        <SidebarComponent activePage="data"/>
+      </div>
+      <div className="p-4 lg:p-4 w-full lg:w-full"> {/* Mengatur padding dan lebar konten */}
+        
+        <div className="w-full bg-white rounded-lg my-4 py-4">
+          <div className="flex flex-col lg:flex-row  justify-between pl-4"> {/* Menggunakan flexbox */}
+          <h1 className="font-bold text-3xl my-4">Data WMReader</h1>
+          </div>
         </div>
-        <div className="p-8">
-          <h1 className="font-bold text-3xl my-4">Doors Overview</h1>
-          <div className="w-full bg-white rounded-lg my-4 py-4">
-            <div className="flex flex-row pl-4 justify-between">
-              <SearchComponent />
-              <div className="mr-4">
-                <ButtonModalComponent text="+ Add New Door" color="greenFill" whatFor="Add Door" />
-              </div>
-            </div>
-          </div>
-          <div className="grid grid-cols-4 gap-4">
-            {doorList.doorArray.map((door, index) => (
-              <CardComponent key={door.id} title={door.doorName} floor={door.floor} name={door.name} doorsId={door.id}
-                desc={door.desc} data={index}/>
-            ))}
-          </div>
+        <div className="overflow-x-auto">
+          <DataListComponent/>
         </div>
       </div>
-    </>
+    </div>
   );
 }
