@@ -1,12 +1,12 @@
-import SidebarComponent from "@/components/sidebar";
-//import Dashboard from "@/components/dashboard"
+//import SidebarComponent from "@/components/sidebar";
+import Dashboard from "@/components/dashboard"
 export default function MyPage() {
   return (
     <>
       <div className="flex flex-row">
         <div className="h-screen">
-          <SidebarComponent />
-          {/*<Dashboard />*/}
+          {/*<SidebarComponent />*/}
+          <Dashboard />
         </div>
          {/* <div>
           <ButtonComponent /> 
@@ -18,4 +18,4 @@ export default function MyPage() {
       </div>
     </>     
   );
-}                              
+}                               

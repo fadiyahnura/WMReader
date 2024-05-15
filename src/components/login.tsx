@@ -16,7 +16,7 @@ export default function Home() {
         <section className="bg-white text-center text-blue-600 flex items-center justify-center rounded-lg shadow-md">
           <div className="w-full max-w-md">
             <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-              <h1 className="text-xl font-bold leading-tight tracking-tight text-blue-600 md:text-2xl dark:text-white">
+              <h1 className="text-xl font-bold leading-tight tracking-tight text-green-600 md:text-2xl dark:text-white">
                 WMReader
               </h1>
               <form className=" space-y-4 md:space-y-6" action="#">
@@ -31,15 +31,15 @@ export default function Home() {
                 <div className="flex items-center justify-between">
                   <div className="flex items-start">
                     <div className="flex items-center h-5">
-                      <input id="remember" aria-describedby="remember" type="checkbox" className="w-4 h-4 border border-blue-300 rounded bg-blue-50 focus:ring-3 focus:ring-primary-300 dark:bg-blue-700 dark:border-blue-600 dark:focus:ring-primary-600 dark:ring-offset-blue-800"  />
+                      <input id="remember" aria-describedby="remember" type="checkbox" className="w-4 h-4 border border-green-300 rounded bg-green-50 focus:ring-3 focus:ring-primary-300 dark:bg-blue-700 dark:border-green-600 dark:focus:ring-primary-600 dark:ring-offset-green-800"  />
                     </div>
                     <div className="ml-3 text-sm">
-                      <label htmlFor="remember" className="text-blue-500 dark:text-blue-300">Remember me</label>
+                      <label htmlFor="remember" className="text-green-500 dark:text-green-300">Remember me</label>
                     </div>
                   </div>
                   
                 </div>
-                <button type="submit" className="w-full text-white bg-blue-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Sign in</button>
+                <button type="submit" className="w-full text-white bg-green-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Login</button>
               </form>
             </div>
           </div>
