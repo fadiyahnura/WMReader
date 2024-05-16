@@ -13,6 +13,7 @@ function StatusListComponent() {
         <Table.Head>
           <Table.HeadCell>Id Pelanggan</Table.HeadCell>
           <Table.HeadCell>Persentase Baterai</Table.HeadCell>
+          <Table.HeadCell>Date Time</Table.HeadCell>
           <Table.HeadCell>Status</Table.HeadCell>
           
         </Table.Head>
@@ -23,6 +24,9 @@ function StatusListComponent() {
             </Table.Cell>
             <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
               {'100%'}
+            </Table.Cell>
+            <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+              {'10-12-2024 14:30'}
             </Table.Cell>
             <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
               {'Aktif'}
@@ -37,4 +41,4 @@ function StatusListComponent() {
   );
 }
 
-export default StatusListComponent;
+export default StatusListComponent; 

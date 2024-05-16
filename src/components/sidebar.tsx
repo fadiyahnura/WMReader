@@ -13,7 +13,10 @@ export default function SidebarComponent(props: SidebarProps) {
     var dashboardStyle: string = nonActive;
     var statusStyle: string = nonActive;
     var dataStyle: string = nonActive;
+    var userStyle: string = nonActive;
+    var adminStyle: string = nonActive;
     var logsStyle: string = nonActive;
+
 
     if (activePage == "dashboard") {
         dashboardStyle = active;
@@ -21,6 +24,10 @@ export default function SidebarComponent(props: SidebarProps) {
         statusStyle = active;
     } else if (activePage == "Data WMReader") {
         dataStyle = active;
+    }else if (activePage == "Data Pelanggan") {
+            userStyle = active;
+    }else if (activePage == "Data Admin") {
+        adminStyle = active;
     } else if (activePage == "Logout") {
         logsStyle = active;
     }
@@ -40,6 +47,13 @@ export default function SidebarComponent(props: SidebarProps) {
                     <Sidebar.Item className={dataStyle} href="data">
                     Data WMReader
                     </Sidebar.Item>
+                    <Sidebar.Item className={userStyle} href="user">
+                    Data Pelanggan
+                    </Sidebar.Item>
+                    <Sidebar.Item className={userStyle} href="admin">
+                    Data Admin
+                    </Sidebar.Item>
+
                     <Sidebar.Item className={logsStyle} href="logs">
                         Logout
                     </Sidebar.Item>
@@ -48,3 +62,4 @@ export default function SidebarComponent(props: SidebarProps) {
         </Sidebar>
     );
 }
+     

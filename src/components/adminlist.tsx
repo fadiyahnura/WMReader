@@ -3,18 +3,18 @@
 
 import { Checkbox, Table, Select, Button } from "flowbite-react";
 import { HiTrash,HiOutlinePencil } from "react-icons/hi";
-//import { DeleteButtonComponent, EditButtonComponent } from "./button";
+import { DeleteButtonComponent, EditButtonComponent } from "./button";
 
 
-function DataListComponent() {
+function AdminListComponent() {
   return (
     <div className="overflow-x-auto">
       <Table hoverable className="w-full">
         <Table.Head>
-          <Table.HeadCell>Id Pelanggan</Table.HeadCell>
-          <Table.HeadCell>Penggunaan Air</Table.HeadCell>
-          <Table.HeadCell>Date</Table.HeadCell>
-          
+        <Table.HeadCell>ID Admin</Table.HeadCell>
+          <Table.HeadCell>Nama</Table.HeadCell>
+          <Table.HeadCell>Alamat</Table.HeadCell>
+          <Table.HeadCell>Action</Table.HeadCell>
           
         </Table.Head>
         <Table.Body className="divide-y">
@@ -23,12 +23,15 @@ function DataListComponent() {
               {'17289268'}
             </Table.Cell>
             <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-              {'000936'}
+              {'Fadiyah Nur Afifah'}
             </Table.Cell>
             <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-              {'01-12-2024'}
+              {'gmp blok f no 81'}
             </Table.Cell>
-          
+            <Table.Cell className="flex">
+              <EditButtonComponent text="Edit" size="door" color="primary" />
+              <DeleteButtonComponent text="Delete" size="door" color="primary" />
+            </Table.Cell>
           
             </Table.Row>
               
@@ -39,4 +42,4 @@ function DataListComponent() {
   );
 }
 
-export default DataListComponent; 
+export default AdminListComponent;   

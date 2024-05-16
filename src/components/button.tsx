@@ -31,10 +31,7 @@ const customTheme: CustomFlowbiteTheme = {
 };
 
 export default function ButtonComponent(props: ButtonProps) {
-  const { text } = props;
-  const { size } = props;
-  const { color } = props;
-  const { link } = props;
+  const { text, size, color, link } = props;
 
   return (
     <Flowbite theme={{ theme: customTheme }}>
@@ -44,17 +41,13 @@ export default function ButtonComponent(props: ButtonProps) {
 }
 
 export function ButtonLinkComponent(props: ButtonProps) {
-  const { text } = props;
-  const { size } = props;
-  const { color } = props;
-  const { link } = props;
-  const { data } = props;
+  const { text, size, color, link, data } = props;
 
   return (
     <Flowbite theme={{ theme: customTheme }}>
       <Link href={{
         pathname: link,
-        query: {data: data}
+        query: { data: data }
       }}>
         <Button onClick={() => { }} color={color} size={size}>{text}</Button>
       </Link>
@@ -64,9 +57,7 @@ export function ButtonLinkComponent(props: ButtonProps) {
 
 export function ButtonModalComponent(props: ButtonProps) {
   const [openModal, setOpenModal] = useState(false);
-  const { text } = props;
-  const { color } = props;
-  const { whatFor } = props;
+  const { text, color, whatFor } = props;
 
   function onCloseModal() {
     setOpenModal(false);
@@ -81,13 +72,10 @@ export function ButtonModalComponent(props: ButtonProps) {
       {whatFor == "Delete" ? <DialogDecisionModal openModal={openModal} onCloseModal={onCloseModal} /> : <h1></h1>}
     </Flowbite>
   );
-
 }
 
 export function CreateButtonComponent(props: ButtonProps) {
-  const { text } = props;
-  const { size } = props;
-  const { color } = props;
+  const { text, size, color } = props;
   const [openModal, setOpenModal] = useState(false);
   const emailInputRef = useRef<HTMLInputElement>(null);
 
@@ -108,37 +96,15 @@ export function CreateButtonComponent(props: ButtonProps) {
               <div className="mb-2 block">
                 <Label htmlFor="name" value="Name" />
               </div>
-              <TextInput id="name" ref={emailInputRef} placeholder="Aritonang" required />
+              <TextInput id="name" ref={emailInputRef} placeholder="Nama Lengkap" required />
             </div>
             <div>
               <div className="mb-2 block">
-                <Label htmlFor="email" value="email" />
+                <Label htmlFor="alamat" value="alamat" />
               </div>
-              <TextInput id="email" required />
+              <TextInput id="alamat" required />
             </div>
-            <div>
-              <div className="mb-2 block">
-                <Label htmlFor="password" value="password" />
-              </div>
-              <TextInput id="password" type="password" required />
-            </div>
-            <div>
-              <div className="mb-2 block">
-                <Label htmlFor="pin" value="Pin" />
-              </div>
-              <TextInput id="pin" type="password" required />
-            </div>
-            <div className="max-w-md">
-              <div className="mb-2 block">
-                <Label htmlFor="role" value="Role" />
-              </div>
-              <Select id="role" required>
-                <option>Admin</option>
-                <option>Mahasiswa</option>
-                <option>Dosen</option>
-              </Select>
-            </div>
-            <div className="flex justify-end"> {/* Menggunakan flex untuk mengatur tombol di sebelah kanan */}
+            <div className="flex justify-end">
               <Button color={colorButton}>Create</Button>
             </div>
           </div>
@@ -149,9 +115,7 @@ export function CreateButtonComponent(props: ButtonProps) {
 }
 
 export function DeleteButtonComponent(props: ButtonProps) {
-  const { text } = props;
-  const { size } = props;
-  const { color } = props;
+  const { text, size, color } = props;
   const [openModal, setOpenModal] = useState(false);
 
   let colorButton: any = "primary";
@@ -186,9 +150,7 @@ export function DeleteButtonComponent(props: ButtonProps) {
 }
 
 export function EditButtonComponent(props: ButtonProps) {
-  const { text } = props;
-  const { size } = props;
-  const { color } = props;
+  const { text, size, color } = props;
   const [openModal, setOpenModal] = useState(false);
   const emailInputRef = useRef<HTMLInputElement>(null);
 
@@ -204,7 +166,7 @@ export function EditButtonComponent(props: ButtonProps) {
         <Modal.Header />
         <Modal.Body>
           <div className="space-y-6">
-            <h3 className="text-xl font-medium text-gray-900 dark:text-white text-center">{text} User Account</h3>
+            <h3 className="text-xl font-medium text-gray-900 dark:text-white text-center">{text} Pelanggan Account</h3>
             <div>
               <div className="mb-2 block">
                 <Label htmlFor="name" value="Name" />
@@ -213,38 +175,52 @@ export function EditButtonComponent(props: ButtonProps) {
             </div>
             <div>
               <div className="mb-2 block">
-                <Label htmlFor="email" value="email" />
+                <Label htmlFor="alamat" value="alamat" />
               </div>
-              <TextInput id="email" required />
-            </div>
-            <div className="mb-2 block">
-              <Label htmlFor="telp" value="telp" />
-            </div>
-            <TextInput id="telp" required />
-            <div>
-              <div className="mb-2 block">
-                <Label htmlFor="password" value="password" />
-              </div>
-              <TextInput id="password" type="password" required />
-            </div>
-            <div>
-              <div className="mb-2 block">
-                <Label htmlFor="pin" value="Pin" />
-              </div>
-              <TextInput id="pin" type="password" required />
-            </div>
-            <div className="max-w-md">
-              <div className="mb-2 block">
-                <Label htmlFor="role" value="Role" />
-              </div>
-              <Select id="role" required>
-                <option>Admin</option>
-                <option>Mahasiswa</option>
-                <option>Dosen</option>
-              </Select>
+              <TextInput id="alamat" required />
             </div>
             <div className="flex justify-end">
               <Button color={colorButton} onClick={() => setOpenModal(false)} >{text}</Button>
+            </div>
+          </div>
+        </Modal.Body>
+      </Modal>
+    </Flowbite>
+  );
+}
+
+export function CreateAdminButtonComponent(props: ButtonProps) {
+  const { text, size, color } = props;
+  const [openModal, setOpenModal] = useState(false);
+  const usernameInputRef = useRef<HTMLInputElement>(null);
+
+  let colorButton: any = "primary";
+
+  if (size != "door") {
+    colorButton = color;
+  }
+  return (
+    <Flowbite theme={{ theme: customTheme }}>
+      <Button onClick={() => setOpenModal(true)} color={colorButton} size={size}>{text}</Button>
+      <Modal show={openModal} size="md" popup onClose={() => setOpenModal(false)} initialFocus={usernameInputRef}>
+        <Modal.Header />
+        <Modal.Body>
+          <div className="space-y-6">
+            <h3 className="text-xl font-medium text-gray-900 dark:text-white text-center">Create Admin Account</h3>
+            <div>
+              <div className="mb-2 block">
+                <Label htmlFor="username" value="Username" />
+              </div>
+              <TextInput id="username" ref={usernameInputRef} placeholder="Username" required />
+            </div>
+            <div>
+              <div className="mb-2 block">
+                <Label htmlFor="password" value="Password" />
+              </div>
+              <TextInput id="password" type="password" required />
+            </div>
+            <div className="flex justify-end">
+              <Button color={colorButton}>Create</Button>
             </div>
           </div>
         </Modal.Body>

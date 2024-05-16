@@ -13,25 +13,11 @@ const FormComponent = () => {
             <input id="name" type="text" placeholder="Masukkan nama Anda" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
           </div>
           <div className="mb-4">
-            <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">Alamat Email:</label>
+            <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">Alamat :</label>
             <input id="email" type="email" placeholder="Masukkan alamat email Anda" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
           </div>
-          <div className="mb-4">
-            <label htmlFor="pin" className="block text-gray-700 text-sm font-bold mb-2">Kata Sandi:</label>
-            <input id="pin" type="password" placeholder="Masukkan PIN Anda" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
-          </div>
-          <div className="mb-4">
-            <label htmlFor="pin" className="block text-gray-700 text-sm font-bold mb-2">PIN:</label>
-            <input id="pin" type="password" placeholder="Masukkan PIN Anda" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
-          </div>
-          <div className="mb-4">
-            <label htmlFor="role" className="block text-gray-700 text-sm font-bold mb-2">Peran (Role):</label>
-            <select id="role" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-              <option value="">Pilih peran</option>
-              <option value="Admin">Admin</option>
-              <option value="User">User</option>
-            </select>
-          </div>
+          
+         
           <div className="flex items-center justify-between">
             <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Submit</button>
           </div>
@@ -42,3 +28,4 @@ const FormComponent = () => {
 };
 
 export default FormComponent;
+   
