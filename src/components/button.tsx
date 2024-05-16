@@ -166,7 +166,7 @@ export function EditButtonComponent(props: ButtonProps) {
         <Modal.Header />
         <Modal.Body>
           <div className="space-y-6">
-            <h3 className="text-xl font-medium text-gray-900 dark:text-white text-center">{text} Pelanggan Account</h3>
+            <h3 className="text-xl font-medium text-gray-900 dark:text-white text-center">{text} User Account</h3>
             <div>
               <div className="mb-2 block">
                 <Label htmlFor="name" value="Name" />
